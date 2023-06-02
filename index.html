@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chick-Fil-A</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <!-- build a page based on a restaurant... catch app.js multiple data types that describe the restaurant... as intricate or simple as you want. -->
+        
+        <!-- header -->
+        <header>
+            <img src="https://www.clipartmax.com/png/middle/303-3030683_home-menu-icon-in-red.png" alt="" class="menuSymbol">
+            <img src="https://logos-world.net/wp-content/uploads/2021/08/Chick-fil-A-Logo.png" alt="" class="logo">
+            <span><a href="">Order <br> Now</a></span>
+        </header>
+
+        <!-- order type -->
+        <div class="orderContainer">
+            <p class="orderTitle">What kind of order can we get started for you?</p>
+            <div class="options" onclick="displayLocation()">
+                <section class="pickup">
+                    <img src="https://w7.pngwing.com/pngs/953/413/png-transparent-commercial-building-office-computer-icons-building-angle-building-text.png" alt="" class="icon">
+                    <p>Order <br> Pickup</p>
+                </section>
+                <section class="delivery">
+                    <img src="https://banner2.cleanpng.com/20180519/plp/kisspng-van-delivery-computer-icons-truck-5b000fa8bfd729.4211485215267306647858.jpg" alt="" class="icon">
+                    <p>Order <br> Delivery</p>
+                </section>
+                <section class="catering">
+                    <img src="https://www.citypng.com/public/uploads/preview/red-notification-bell-icon-transparent-background-11638985067nbcbd2lr4p.png" alt="" class="icon">
+                    <p>Order <br> Catering</p>
+                </section>
+            </div>
+            <p class="locations"></p>
+        </div>
+        
+            <div class="menuContainer">
+
+                <div class="menuHeading">
+                    <h1>Chick-fil-A® Menu</h1>
+                    <p>Availability may differ at different locations.</p>
+                </div>
+
+            <!-- menu -->
+            <div class="menuOptions">
+                <!-- breakfast -->
+                <div class="breakfastList">
+                    <section class="top">
+                            <p><img src="https://www.cfacdn.com/img/order/menu/Mobile/Breakfast/Parent/Dec19_ckn_biscuit_meal_mobile.webp" alt="" class="breakfastPic"> Breakfast:</p>
+                        
+                            <img src="https://www.pngfind.com/pngs/m/299-2997979_free-png-red-down-arrow-png-image-with.png" alt="" class="arrowIcon breakfastArrow" id="breakfastArrow" onclick="displayFood('breakfast')">
+                    </section>
+                    <!-- where js food will populate -->
+                    <section class="breakfast food">
+                        <!-- p from js -->
+                    </section>
+                </div>
+
+                
+                <!-- lunch -->
+                <div class="lunchList">
+                    <section class="top">
+                        <p><img src="https://www.cfacdn.com/img/order/menu/Mobile/Entrees/Parent/Grilled_sandwich.webp" alt="" class="lunchPic"> Lunch:</p>
+                        <img src="https://www.pngfind.com/pngs/m/299-2997979_free-png-red-down-arrow-png-image-with.png" alt="" class="arrowIcon lunchArrow" onclick="displayFood('lunch')">
+                    </section>
+                    <!-- where js food will populate -->
+                    <section class="lunch food">
+                        <!-- p from js -->
+                    </section>
+                </div>
+
+                <!-- dinner -->
+                <div class="dinnerList">
+                    <section class="top">
+                        <p><img src="https://www.cfacdn.com/img/order/menu/Mobile/Salads/Menu%20Item/cobb_nuggets_mobile_nodressing.webp" alt="" class="dinnerPic"> Dinner:</p>
+                        <img src="https://www.pngfind.com/pngs/m/299-2997979_free-png-red-down-arrow-png-image-with.png" alt="" class="arrowIcon dinnerArrow" onclick="displayFood('dinner')">
+                    </section>
+                    <!-- where js food will populate -->
+                    <section class="dinner food">
+                        <!-- p from js -->
+                    </section>
+                </div>
+
+                <!-- drinks -->
+                <div class="drinksList">
+                    <section class="top">
+                        <p><img src="https://www.cfacdn.com/img/order/menu/Mobile/Beverages/Parent/lemonadeTea_header_mobile.webp" alt="" class="drinksPic"> Drinks:</p>
+                        <img src="https://www.pngfind.com/pngs/m/299-2997979_free-png-red-down-arrow-png-image-with.png" alt="" class="arrowIcon drinksArrow" onclick="displayFood('drinks')">
+                    </section>
+                    <!-- where js food will populate -->
+                    <section class="drinks food">
+                        <!-- p from js -->
+                    </section>
+                </div>
+            </div>
+
+            </div>
+        
+
+        <script src="app.js"></script>
+</body>
+</html>

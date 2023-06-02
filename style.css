@@ -1,0 +1,122 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 15px;
+    /* border: 2px solid red; */
+}
+
+.menuSymbol{
+    height: 30px;
+}
+
+.logo{
+    height: 50px;
+}
+
+.menuContainer img {
+    height: 25px;
+    width: auto;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.orderContainer{
+    /* border: 2px solid green; */
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px 0;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+}
+
+.options section {
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 100px;
+    color: red;
+    background-color: white;
+    margin: 4px;
+}
+
+.options img {
+    height: 30px;
+    width: auto;
+    margin-top: 4px;
+}
+
+.orderTitle{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.menuHeading{
+    /* border: 2px solid red; */
+    text-align: center;
+}
+
+.menuHeading h1 {
+    color: darkblue;
+    margin-bottom: 4px;
+    font-size: 1.5em;
+}
+
+.menuHeading p {
+    color: grey;
+    margin-top: 8px
+}
+
+.menuOptions {
+    /* border: 2px solid blue; */
+
+}
+
+.menuOptions section.top p {
+    color: red;
+    font-size: 1.25em;
+    font-weight: bold;
+    border: 2px solid black
+}
+
+.menuOptions div {
+    border: 2px solid green;
+    margin: 5px;
+    width: 100%;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.arrowIcon {
+    margin-right: 6px
+}
+
+.menuOptions p img {
+    margin-right: 5px;
+    width: 40px;
+}
+
+/* .breakfastFoodList{
+    display: none;
+} */
+
+section + section.food {
+    font-size: 1.5em;
+}
+
+img{
+    height: 50px;
+    width: auto
+}
