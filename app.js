@@ -114,15 +114,46 @@ const menu2 = {
 // set count for future loop
 let count = 0
 
+
 //grabbing elements to later populate with data
-let populatedBreakfast = document.querySelector('.breakfast')
-let populatedLunch = document.querySelector('.lunch')
-let populatedDinner = document.querySelector('.dinner')
-let populatedDrinks = document.querySelector('.drinks')
+const populatedBreakfast = document.querySelector('.breakfast')
+const populatedLunch = document.querySelector('.lunch')
+const populatedDinner = document.querySelector('.dinner')
+const populatedDrinks = document.querySelector('.drinks')
+//checking
+console.log(populatedBreakfast)
+
+
+//function that grabs property{object} of menu2{}
+const clickedCategory = (type) => {
+    let foodType = menu2[type]
+
+    for(const property in foodType){
+        count++
+        console.log(property)
+        console.log(foodType[property])
+        //store individual properties of property in variables for convenience
+        const name = foodType[property].name
+        const price = foodType[property].price
+        const quantity = foodType[property].quantity
+        const image = foodType[property].image
+        console.log(name, price, quantity, image)
+        getElement(type,name,price,quantity,image,count)
+    }
+}
+
+//function that unhides element that will be populated.. just in case
+const unhideElement = () => {
+    populatedBreakfast.hidden = false
+    populatedLunch.hidden = false
+    populatedDinner.hidden = false
+    populatedDrinks.hidden = false
+}
+
 
 // function that grabs and displays food
 const displayFood = (type) => {
-    // check that parameter grabs right data
+    // check that parameter holds the right data
     console.log(type)
 
     // grab data from menu object (dot or bracket notation)
@@ -135,26 +166,13 @@ const displayFood = (type) => {
     //avoid duplication
     removeContent()
 
-    // for in loop to grab individual properties of foodType
+    // function that grabs specific property from menu2{} and passes all info to getElement() function that it also calls
+    clickedCategory(type)
+    
+    // unhiding element to populate (avoid logical error of not having parent element to append child to)
+    unhideElement()
 
-    for(const property in foodType){
-        count++
-        console.log(property)
-        console.log(foodType[property])
-        //store individual properties of property in variables for convenience
-        const name = foodType[property].name
-        const price = foodType[property].price
-        const quantity = foodType[property].quantity
-        const image = foodType[property].image
-        console.log(name, price, quantity, image)
-        getElement(type,name,price,quantity,image, count)
-    }
-    // unhiding element to populate
-    populatedBreakfast.hidden = false
-    populatedLunch.hidden = false
-    populatedDinner.hidden = false
-    populatedDrinks.hidden = false
-    // function to hide others
+    // function to hide other elements (to be populated in future)
     clearOthers(type)
 }
 
@@ -203,17 +221,10 @@ const populateElement = (element,name,price,quantity,image) => {
     } else if(quantity === 1){
         paragraph.innerText = `${quantity} ${name} for ${price}` 
     }
-
-    //
 }
 
 //  function to clear other menu items when new category is clicked
-
 const clearOthers = (type) => {
-    // populated.innerHTML = ""
-
-    console.log(populatedBreakfast)
-
     //add hidden property to food category NOT being clicked
     if(type === 'breakfast'){
         populatedLunch.hidden = true
